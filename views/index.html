@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.css">
+
+    <!-- Website CSS style -->
+    <link rel="stylesheet" type="text/css" href="/css/main.css">
+
+    <!-- Website Font style -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+
+    <!-- Google Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Passion+One' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
+
+    <title>Admin</title>
+</head>
+
+<body>
+    <h1>CRIAR CONTA</h1>
+    <div class="container">
+        <div class="row main" style="flex-direction: column;">
+            <div class="main-login main-center align-center">
+
+                <form method="POST">
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Nome para a Conta</label>
+                        <input type="name" class="form-control" aria-describedby="emailHelp" placeholder="Digite o nome do proprietario"
+                            name="nome">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Valor para a Conta</label>
+                        <input type="number" class="form-control" aria-describedby="emailHelp" placeholder="Enter com money"
+                            name="contas">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Cadastrar</button>
+                </form><br><br><br>
+            </div>
+            <a class="btn btn-primary" href="/transacoes">Ir para transicoes</a>
+            <a class="btn btn-danger" href="/deposito">Ir para Deposito</a>
+            <a class="btn btn-warning" href="/saque">Ir para Saque</a><br>
+
+        </div>
+    </div>
+
+    <script type="text/javascript" src="/js/bootstrap.js"></script>
+</body>
+
+</html>
