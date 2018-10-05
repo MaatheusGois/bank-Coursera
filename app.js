@@ -1,22 +1,21 @@
-var createError = require('http-errors');
-var express = require('express');
-var path = require('path');
-var cookieParser = require('cookie-parser');
-var logger = require('morgan');
-var cons = require('consolidate');
+const createError = require('http-errors');
+const express = require('express');
+const path = require('path');
+const cookieParser = require('cookie-parser');
+const logger = require('morgan');
+const cons = require('consolidate');
 
-var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/transacoes');
-var saqueRouter = require('./routes/saque');
-var depositoRouter = require('./routes/deposito');
-
-var apisRouter = require('./routes/api');
-
+const indexRouter = require('./routes/index');
+const usersRouter = require('./routes/transacoes');
+const saqueRouter = require('./routes/saque');
+const depositoRouter = require('./routes/deposito');
+const apisRouter = require('./routes/api');
+const config = require('./config.js')
 
 
 // MONGO
 const mongoose = require('mongoose')
-mongoose.connect('mongodb://admin:admin123@ds113853.mlab.com:13853/contas')
+mongoose.connect(config.url)
 const db = mongoose.connection
 db.on('error', () => {
   throw new Error('unable to connect to database at ' + config.db)
